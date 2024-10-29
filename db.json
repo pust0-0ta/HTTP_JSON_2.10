@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "VeraFortochkina",
+      "email": "vera@example.com"
+    },
+    {
+      "id": "2",
+      "name": "VasyaPalkin",
+      "email": "PiVas@example.com"
+    },
+    {
+      "id": "3",
+      "name": "MrSmit",
+      "email": "Mr@example.com"
+    },
+    {
+      "id": "8724",
+      "name": "VeraFortochkina",
+      "email": "vera@example.com"
+    },
+    {
+      "id": "1c16",
+      "name": "бог",
+      "email": "god@example.com"
+    },
+    {
+      "id": "8642",
+      "name": "бог",
+      "email": "god@example.com"
+    },
+    {
+      "id": "29c0",
+      "name": "бог",
+      "email": "god@example.com"
+    },
+    {
+      "id": "2ffb",
+      "name": "бог",
+      "email": "god@example.com"
+    },
+    {
+      "id": "ee5d",
+      "name": "бог",
+      "email": "god@example.com"
+    },
+    {
+      "id": "a19a",
+      "name": "бог",
+      "email": "god@example.com"
+    },
+    {
+      "id": "e1e4",
+      "name": "Зритель",
+      "email": "Z@example.com"
+    },
+    {
+      "id": "a5bd",
+      "name": "Зритель",
+      "email": "Z@example.com"
+    }
+  ]
+}

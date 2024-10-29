@@ -1,0 +1,83 @@
+body {
+  font-family: , sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: linear-gradient(
+    to right,
+    #feffffe6,
+    #06fadd,
+    #e996fe,
+    #ffec9a,
+    #feffffe6
+  );
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.nav__link {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+}
+.content {
+  color: #333;
+  text-align: center;
+  padding: 10px;
+}
+.counter {
+  margin-top: 20px;
+}
+.timer {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ff2903;
+}
+.nav__link:hover {
+  color: #f55a0c;
+}
+.content {
+  padding: 20px;
+}
+.nav__link::after {
+  content: "\2718";
+  padding: 10px;
+  color: #27ec9a9a;
+}
+.gallery {
+  padding: 20px;
+  text-align: center;
+}
+.gallery-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.gallery-container__img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 50%; /* Это делает изображение круглым */
+  object-fit: cover; /* Это обрезает изображение, чтобы оно заполнило круг */
+}
+
+footer {
+  background: linear-gradient(
+    to right,
+    #feffffe6,
+    #06fadd,
+    #e996fe,
+    #ffec9a,
+    #feffffe6
+  );
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Работа с браузерными событиями</h1>
+    </header>
+
+    <main class="content">
+      <h1>Add User</h1>
+      <form id="add-user-form">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <button type="submit">Add User</button>
+      </form>
+      <script>
+        const form = document.getElementById("add-user-form");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault(); // Предотвращаем отправку формы по умолчанию
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          // Создаем объект пользователя
+          const newUser = {
+            name: name,
+            email: email,
+          };
+          // Отправляем POST-запрос на сервер
+          fetch("http://localhost:3000/users", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newUser), // Преобразуем объект в JSON-строку
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Пользователь добавлен:", data);
+            })
+            .catch((error) => console.error("Ошибка:", error));
+        });
+      </script>
+
+      <div class="gallery-container">
+        <img
+          src="img/eye_fav.png"
+          alt="Всевидящее око"
+          class="gallery-container__img"
+        />
+      </div>
+      <h1>Users List</h1>
+      <ul id="users-list"></ul>
+      <script>
+        // Отправка GET-запроса на локальный сервер
+        fetch("http://localhost:3000/users")
+          .then((response) => response.json()) // Преобразование ответа в JSON
+          .then((data) => {
+            const usersList = document.getElementById("users-list");
+
+            // Создание списка пользователей
+            data.forEach((user) => {
+              const li = document.createElement("li");
+              li.textContent = `${user.name} (${user.email})`;
+              usersList.appendChild(li);
+            });
+          })
+          .catch((error) => console.error("Ошибка:", error));
+        // Создание кнопки редактировать
+      </script>
+      <section class="gallery"></section>
+    </main>
+    <footer class="footer">
+      <p>© 2024 Webpage</p>
+    </footer>
+  </body>
+</html>
